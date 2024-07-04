@@ -71,8 +71,8 @@ body {
 }
 
 .skills-container .skill img {
-    width: 24px;
-    height: 24px;
+    width: 100px;
+    height: 100px;
     margin-right: 10px;
     z-index: 1;
 }
@@ -213,12 +213,7 @@ footer {
     z-index: 1;
 }
 
-.skills-container .skill img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    z-index: 1;
-}
+
 
 .skills-container .skill::before {
     content: '';
