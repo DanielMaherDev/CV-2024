@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <title>Parallax CV</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    
-    <script src="js/script.js"></script>
+    <header class="parallax" id="parallax-header">
+        <div class="header-content">
+            <h1>Daniel Maher - Web Developer</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section class="about-me parallax" id="parallax-about">
+            <div class="about-content">
+                <div class="profile-pic">
+                    <img src="images/profile-pic.jpeg" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a dedicated 27-year-old web developer originally from Ireland, currently based in Athens, Greece. With a passion for web development and a specialization in branding and identity, I bring over a decade of experience in the tech industry. For the past 5 years, I have focused on leveraging my expertise as a HubSpot specialist, where I've successfully implemented CRM solutions and enhanced customer sites to drive business growth and client satisfaction.
+
+                        My journey in web development has been marked by a commitment to delivering high-quality projects that not only meet but exceed client expectations. I thrive in dynamic environments where creativity and technical skills converge to create impactful digital solutions. Whether collaborating with teams or working independently, I am driven by a desire to innovate and refine my craft continually.
+
+                        Beyond my professional achievements, I have also undertaken projects that showcase my ability to conceptualize and execute comprehensive branding strategies. These experiences have honed my skills in UI/UX design, front-end development, and backend integration, enabling me to contribute effectively to diverse project scopes.
+
+                        Looking forward, I am eager to further expand my expertise in web development, explore new technologies, and contribute to innovative projects that push the boundaries of digital experiences.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills parallax" id="parallax-skills">
+            <h2>Skills</h2>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JS</div>
+            <div class="skill">Python</div>
+        </section>
+        <section class="projects parallax" id="parallax-projects">
+            <h2>Projects Etc</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+    </main>
+    <footer class="parallax" id="parallax-footer">
+        <p>&copy; 2024 My Name</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
