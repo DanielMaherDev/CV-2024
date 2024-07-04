@@ -1,0 +1,79 @@
+/* styles/style.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-content,
+.about-content,
+.skills,
+.projects,
+.footer-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about-me {
+    grid-column: 1 / 2;
+}
+
+.about-text-container {
+    text-align: left;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.skills-container .skill {
+    width: 100%;
+    background: #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.projects {
+    grid-column: 1 / 3;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
