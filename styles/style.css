@@ -60,10 +60,88 @@ body {
 
 .skills-container .skill {
     width: 100%;
-    background: #ccc;
     margin: 10px 0;
     padding: 10px;
     text-align: center;
+    color: white;
+    position: relative;
+}
+
+.skills-container .skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.skills-container .skill.html::before {
+    background: rgba(227, 76, 38, 0.5);
+}
+
+.skills-container .skill.css::before {
+    background: rgba(38, 77, 228, 0.5);
+}
+
+.skills-container .skill.js::before {
+    background: rgba(240, 219, 79, 0.5);
+}
+
+.skills-container .skill.python::before {
+    background: rgba(48, 105, 152, 0.5);
+}
+
+/* Progress bars */
+.skills-container .skill.html::after {
+    content: '';
+    display: block;
+    width: 90%;
+    /* Adjust percentage as needed */
+    height: 100%;
+    background: #E34C26;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skills-container .skill.css::after {
+    content: '';
+    display: block;
+    width: 80%;
+    /* Adjust percentage as needed */
+    height: 100%;
+    background: #264DE4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skills-container .skill.js::after {
+    content: '';
+    display: block;
+    width: 70%;
+    /* Adjust percentage as needed */
+    height: 100%;
+    background: #F0DB4F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+.skills-container .skill.python::after {
+    content: '';
+    display: block;
+    width: 60%;
+    /* Adjust percentage as needed */
+    height: 100%;
+    background: #306998;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .projects {
