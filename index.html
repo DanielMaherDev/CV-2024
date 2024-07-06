@@ -6,17 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax CV</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
-    <header class="parallax" id="parallax-header">
-        <!--
-        <div class="header-content">
-            <h1>DAN MAHER</h1>
-            <h2>Frontend UX designer</h2>
-        </div>
-        -->
-    </header>
+    <header class="parallax" id="parallax-header"></header>
     <main class="container">
         <section class="about-me parallax" id="parallax-about">
             <div class="about-content">
@@ -29,22 +24,18 @@
                         <h3>Who am I?</h3>
                         <p>A dedicated 27-year-old web developer from Ireland, now based in Athens, Greece.</p>
                     </div>
-
                     <div class="about-text" id="experience">
                         <h3>Experience</h3>
                         <p>Over a decade of experience in web development with a focus on HubSpot CRM solutions.</p>
                     </div>
-
                     <div class="about-text" id="skills">
                         <h3>Skills</h3>
                         <p>Specialized in branding, identity, UI/UX design, front-end, and backend integration.</p>
                     </div>
-
                     <div class="about-text" id="achievements">
                         <h3>Achievements</h3>
                         <p>Successfully delivered high-quality projects exceeding client expectations.</p>
                     </div>
-
                     <div class="about-text" id="goals">
                         <h3>Goals</h3>
                         <p>Eager to expand expertise, explore new technologies, and contribute to innovative web projects.</p>
@@ -54,7 +45,7 @@
         </section>
         <!-- SKILLS -->
         <div class="flexdiv">
-            <section class=" skills parallax" id="parallax-skills">
+            <section class="skills parallax" id="parallax-skills">
                 <h2>Skills</h2>
                 <div class="skills-container">
                     <div class="skill html">
@@ -77,17 +68,55 @@
                     <div class="skill css">
                         <img src="images/css-logo.png" alt="CSS Icon">
                         CSS - 80%
+                        <div class="expanding-section">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <p>Detail 1 about CSS.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 2 about CSS.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 3 about CSS.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skill js">
                         <img src="images/js-logo.png" alt="JavaScript Icon">
                         JS - 70%
+                        <div class="expanding-section">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <p>Detail 1 about JS.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 2 about JS.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 3 about JS.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skill python">
                         <img src="images/python-logo.png" alt="Python Icon">
                         Python - 60%
+                        <div class="expanding-section">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <p>Detail 1 about Python.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 2 about Python.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 3 about Python.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </section>
             <section class="projects parallax" id="parallax-projects">
                 <h2>Projects Etc</h2>
@@ -106,21 +135,6 @@
     <footer class="parallax" id="parallax-footer">
         <p>&copy; 2024 My Name</p>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.skill').click(function() {
-                const expandingSection = $(this).find('.expanding-section');
-                $('.expanding-section').not(expandingSection).slideUp(300);
-                expandingSection.slideToggle(300);
-            });
-        });
-    </script>
-
-    <script src="/js/script.js">
-    </script>
 </body>
 
 </html>
