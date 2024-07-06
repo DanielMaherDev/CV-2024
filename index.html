@@ -10,10 +10,12 @@
 
 <body>
     <header class="parallax" id="parallax-header">
+        <!--
         <div class="header-content">
             <h1>DAN MAHER</h1>
             <h2>Frontend UX designer</h2>
         </div>
+        -->
     </header>
     <main class="container">
         <section class="about-me parallax" id="parallax-about">
@@ -22,7 +24,7 @@
                     <img src="images/profile-pic.jpeg" alt="Profile Picture">
                 </div>
                 <div class="about-text-container">
-                    <h2>About Me</h2>
+                    <h2 class="txtcntr txtlght">About Me</h2>
                     <div class="about-text" id="who-am-i">
                         <h3>Who am I?</h3>
                         <p>A dedicated 27-year-old web developer from Ireland, now based in Athens, Greece.</p>
@@ -51,40 +53,42 @@
             </div>
         </section>
         <!-- SKILLS -->
-        <section class="skills parallax" id="parallax-skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill html">
-                    <img src="/images/html-logo.png" alt="HTML Icon">
-                    HTML - 90%
+        <div class="flexdiv">
+            <section class=" skills parallax" id="parallax-skills">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill html">
+                        <img src="/images/html-logo.png" alt="HTML Icon">
+                        HTML - 90%
+                    </div>
+                    <div class="skill css">
+                        <img src="images/css-logo.png" alt="CSS Icon">
+                        CSS - 80%
+                    </div>
+                    <div class="skill js">
+                        <img src="images/js-logo.png" alt="JavaScript Icon">
+                        JS - 70%
+                    </div>
+                    <div class="skill python">
+                        <img src="images/python-logo.png" alt="Python Icon">
+                        Python - 60%
+                    </div>
                 </div>
-                <div class="skill css">
-                    <img src="images/css-logo.png" alt="CSS Icon">
-                    CSS - 80%
-                </div>
-                <div class="skill js">
-                    <img src="images/js-logo.png" alt="JavaScript Icon">
-                    JS - 70%
-                </div>
-                <div class="skill python">
-                    <img src="images/python-logo.png" alt="Python Icon">
-                    Python - 60%
-                </div>
-            </div>
 
-        </section>
-        <section class="projects parallax" id="parallax-projects">
-            <h2>Projects Etc</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-            <!-- Add more projects as needed -->
-        </section>
+            </section>
+            <section class="projects parallax" id="parallax-projects">
+                <h2>Projects Etc</h2>
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </section>
+        </div>
     </main>
     <footer class="parallax" id="parallax-footer">
         <p>&copy; 2024 My Name</p>
