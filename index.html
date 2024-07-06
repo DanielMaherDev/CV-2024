@@ -60,6 +60,19 @@
                     <div class="skill html">
                         <img src="/images/html-logo.png" alt="HTML Icon">
                         HTML - 90%
+                        <div class="expanding-section">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <p>Detail 1 about HTML.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 2 about HTML.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p>Detail 3 about HTML.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skill css">
                         <img src="images/css-logo.png" alt="CSS Icon">
@@ -93,7 +106,21 @@
     <footer class="parallax" id="parallax-footer">
         <p>&copy; 2024 My Name</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.skill').click(function() {
+                const expandingSection = $(this).find('.expanding-section');
+                $('.expanding-section').not(expandingSection).slideUp(300);
+                expandingSection.slideToggle(300);
+            });
+        });
+    </script>
+
+    <script src="/js/script.js">
+    </script>
 </body>
 
 </html>

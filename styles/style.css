@@ -12,10 +12,10 @@ h1 {
 body {
     margin: 0;
     padding-top: 50px;
+    background-color: #f0ede4;
 }
 
 .container {
-
     border-top: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -56,7 +56,6 @@ body {
 .about-text-container {
     text-align: left;
     margin-top: 50px;
-
 }
 
 .skills-container {
@@ -66,6 +65,37 @@ body {
     padding: 0 20px;
 }
 
+.skills-container .skill {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.skills-container .skill img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.skills-container .skill::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    height: 50%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
 
 .skills-container .skill.html::before {
     background: rgba(227, 76, 38, 0.5);
@@ -88,48 +118,48 @@ body {
     content: '';
     display: block;
     width: 90%;
-    /* Adjust percentage as needed */
     background: #E34C26;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+    height: 50%;
 }
 
 .skills-container .skill.css::after {
     content: '';
     display: block;
-    /* Adjust percentage as needed */
+    width: 80%;
     background: #264DE4;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+    height: 50%;
 }
 
 .skills-container .skill.js::after {
     content: '';
     display: block;
     width: 70%;
-    /* Adjust percentage as needed */
     background: #F0DB4F;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    color: black;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+    height: 50%;
 }
 
 .skills-container .skill.python::after {
     content: '';
     display: block;
     width: 60%;
-    /* Adjust percentage as needed */
     background: #306998;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+    height: 50%;
 }
 
 .projects {
@@ -151,219 +181,16 @@ footer {
     text-align: center;
 }
 
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 20px;
-}
-
-.skills-container .skill {
-    width: 80%;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: left;
-    color: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index: 1;
-}
-
-
-
-.skills-container .skill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 75px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: 0;
-}
-
-.skills-container .skill.html::before {
-    background: rgba(227, 76, 38, 0.5);
-}
-
-.skills-container .skill.css::before {
-    background: rgba(38, 77, 228, 0.5);
-}
-
-.skills-container .skill.js::before {
-    background: rgba(240, 219, 79, 0.5);
-}
-
-.skills-container .skill.python::before {
-    background: rgba(48, 105, 152, 0.5);
-}
-
-/* Progress bars */
-.skills-container .skill.html::after {
-    content: '';
-    display: block;
-    width: 90%;
-    /* Adjust percentage as needed */
-    background: #E34C26;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.skills-container .skill.css::after {
-    content: '';
-    display: block;
-    width: 80%;
-    /* Adjust percentage as needed */
-    background: #264DE4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.skills-container .skill.js::after {
-    content: '';
-    display: block;
-    width: 70%;
-    /* Adjust percentage as needed */
-    background: #F0DB4F;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    color: black;
-}
-
-.skills-container .skill.python::after {
-    content: '';
-    display: block;
-    width: 60%;
-    /* Adjust percentage as needed */
-    background: #306998;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-
-
-.skills-container .skill img {
-    width: 50px;
-    /* Adjust the width as needed */
-    height: 50px;
-    /* Adjust the height as needed */
-    margin-right: 10px;
-    z-index: 2;
-    position: relative;
-    /* Ensure the image floats over the bar */
-}
-
-.skills-container .skill::before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    /* Adjust this value to vertically center the progress bar */
-    left: 15%;
-    /* Adjust this value to horizontally align the progress bar */
-    height: 50%;
-    /* Make the height 80% of the container height */
-    width: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: 0;
-}
-
-.skills-container .skill.html::before {
-    background: rgba(227, 76, 38, 0.5);
-}
-
-.skills-container .skill.css::before {
-    background: rgba(38, 77, 228, 0.5);
-}
-
-.skills-container .skill.js::before {
-    background: rgba(240, 219, 79, 0.5);
-}
-
-.skills-container .skill.python::before {
-    background: rgba(48, 105, 152, 0.5);
-}
-
-/* Progress bars */
-.skills-container .skill.html::after {
-    content: '';
-    display: block;
-    width: 72%;
-    /* Adjust percentage as needed to be 80% of the image width */
-    /* Adjust height to make it 80% of the image height */
-    background: #E34C26;
-    position: absolute;
-    top: 10%;
-    /* Center the progress bar vertically within the container */
-    left: 15%;
-    z-index: 1;
-}
-
-.skills-container .skill.css::after {
-    content: '';
-    display: block;
-    width: 64%;
-    /* Adjust percentage as needed */
-    /* Adjust height to make it 80% of the image height */
-    background: #264DE4;
-    position: absolute;
-    top: 10%;
-    /* Center the progress bar vertically within the container */
-    left: 15%;
-    z-index: 1;
-}
-
-.skills-container .skill.js::after {
-    content: '';
-    display: block;
-    width: 56%;
-    /* Adjust percentage as needed */
-    /* Adjust height to make it 80% of the image height */
-    background: #F0DB4F;
-    position: absolute;
-    top: 10%;
-    /* Center the progress bar vertically within the container */
-    left: 15%;
-    z-index: 1;
-    color: black;
-}
-
-.skills-container .skill.python::after {
-    content: '';
-    display: block;
-    width: 48%;
-    /* Adjust percentage as needed */
-    /* Adjust height to make it 80% of the image height */
-    background: #306998;
-    position: absolute;
-    top: 10%;
-    /* Center the progress bar vertically within the container */
-    left: 15%;
-    z-index: 1;
-}
-
-.skills-container .skill::after {
-    height: 50%;
-}
-
 .txtcntr {
-    text-align: center
+    text-align: center;
 }
 
 .txtlght {
-    font-weight: 200
+    font-weight: 200;
 }
 
 .txtmrg {
-    margin: 20px
+    margin: 20px;
 }
 
 h1,
@@ -381,5 +208,24 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* Adjust the gap between flex items */
+}
+
+.expanding-section {
+    display: none;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+skill {
+    z-index: 1000000;
 }
