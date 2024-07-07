@@ -20,7 +20,7 @@ $(document).ready(function() {
 
         // Toggle current section
         if (expandingSection.css('max-height') === '0px') {
-            expandingSection.css('max-height', '300px');
+            expandingSection.css('max-height', '300px'); // Adjusted height for better visibility
         } else {
             expandingSection.css('max-height', '0');
         }
@@ -28,5 +28,20 @@ $(document).ready(function() {
         // Log current styles for debugging
         console.log("Current max-height after toggle: ", expandingSection.css('max-height'));
         console.log("Current computed style: ", window.getComputedStyle(expandingSection[0]).maxHeight);
+    });
+
+    // Carousel controls
+    $('.carousel-controls .prev').click(function() {
+        const carousel = $(this).closest('.expanding-section').find('.carousel');
+        const currentMargin = parseInt(carousel.css('margin-left')) || 0;
+        const itemWidth = carousel.find('.carousel-item').outerWidth();
+        carousel.css('margin-left', currentMargin + itemWidth + 'px');
+    });
+
+    $('.carousel-controls .next').click(function() {
+        const carousel = $(this).closest('.expanding-section').find('.carousel');
+        const currentMargin = parseInt(carousel.css('margin-left')) || 0;
+        const itemWidth = carousel.find('.carousel-item').outerWidth();
+        carousel.css('margin-left', currentMargin - itemWidth + 'px');
     });
 });
