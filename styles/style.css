@@ -6,7 +6,12 @@
 /* General styles */
 body,
 h1 {
-    font-family: Roboto, sans-serif;
+    font-family: Helvetica, sans-serif;
+}
+
+.profile-pic,
+.skill {
+    cursor: pointer;
 }
 
 body {
@@ -44,17 +49,6 @@ body {
 .footer-content {
     padding: 20px;
     text-align: center;
-}
-
-.profile-pic {
-    width: 320px;
-    height: 480px;
-}
-
-.profile-pic img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
 }
 
 .flip-container {
@@ -96,6 +90,29 @@ body {
     transform: rotateY(180deg);
 }
 
+.profile-pic {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    /* Indicates interactivity */
+    border-radius: 50%;
+    border: 5px solid white;
+    /* White circular ring */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for effect */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 .about-me {
     grid-column: 1 / 2;
     border-right: 1px solid #4A90E2;
@@ -124,6 +141,8 @@ body {
 .skill-info {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+
 }
 
 .skill-info img {
@@ -141,7 +160,7 @@ body {
 
 .progress-bar {
     flex-grow: 1;
-    height: 20px;
+    height: 30px;
     background: rgba(0, 0, 0, 0.1);
     position: relative;
     border-radius: 10px;
