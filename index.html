@@ -15,8 +15,16 @@
     <main class="container">
         <section class="about-me parallax" id="parallax-about">
             <div class="about-content">
-                <div class="profile-pic">
-                    <img src="images/profile-pic.jpeg" alt="Profile Picture">
+                <div class="flip-container" onclick="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front profile-pic">
+                            <img src="images/profile-pic.jpeg" alt="Profile Picture">
+                        </div>
+                        <div class="back profile-pic">
+                            <p>Back of the profile card.</p>
+                            <!-- Add any additional information or elements you want to display on the back side -->
+                        </div>
+                    </div>
                 </div>
                 <div class="about-text-container">
                     <h2 class="txtcntr txtlght">About Me</h2>

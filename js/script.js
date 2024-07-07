@@ -13,10 +13,14 @@ $(document).ready(function() {
         }
 
         // Close other sections
-        $('.expanding-section').not(expandingSection).removeClass('active');
+        $('.expanding-section').not(expandingSection).slideUp(300).removeClass('active');
 
-        // Toggle current section
-        expandingSection.toggleClass('active');
+        // Toggle current section with slide effect
+        if (expandingSection.hasClass('active')) {
+            expandingSection.slideUp(300).removeClass('active');
+        } else {
+            expandingSection.slideDown(300).addClass('active');
+        }
 
         // Log current styles for debugging
         console.log("Current max-height after toggle: ", expandingSection.css('max-height'));
@@ -24,17 +28,30 @@ $(document).ready(function() {
     });
 
     // Carousel controls
-    $('.carousel-controls .prev').click(function() {
+    $('.carousel-controls .prev').click(function(event) {
+        event.stopPropagation(); // Prevent closing the expanding section
         const carousel = $(this).closest('.expanding-section').find('.carousel');
         const currentMargin = parseInt(carousel.css('margin-left')) || 0;
         const itemWidth = carousel.find('.carousel-item').outerWidth();
-        carousel.css('margin-left', currentMargin + itemWidth + 'px');
+
+        if (currentMargin < 0) { // Prevent going beyond the first item
+            carousel.animate({
+                'margin-left': currentMargin + itemWidth + 'px'
+            }, 300);
+        }
     });
 
-    $('.carousel-controls .next').click(function() {
+    $('.carousel-controls .next').click(function(event) {
+        event.stopPropagation(); // Prevent closing the expanding section
         const carousel = $(this).closest('.expanding-section').find('.carousel');
         const currentMargin = parseInt(carousel.css('margin-left')) || 0;
         const itemWidth = carousel.find('.carousel-item').outerWidth();
-        carousel.css('margin-left', currentMargin - itemWidth + 'px');
+        const totalWidth = carousel.find('.carousel-item').length * itemWidth;
+
+        if (Math.abs(currentMargin) < totalWidth - itemWidth) { // Prevent going beyond the last item
+            carousel.animate({
+                'margin-left': currentMargin - itemWidth + 'px'
+            }, 300);
+        }
     });
 });
