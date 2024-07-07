@@ -54,4 +54,18 @@ $(document).ready(function() {
             }, 300);
         }
     });
+
+    // Profile pic flip functionality
+    $('.flip-container').click(function() {
+        const flipper = $(this).find('.flipper');
+        flipper.toggleClass('hover');
+
+        if (flipper.hasClass('hover')) {
+            $(this).find('.front').css('display', 'none');
+            $(this).find('.back').css('display', 'block');
+        } else {
+            $(this).find('.front').css('display', 'block');
+            $(this).find('.back').css('display', 'none');
+        }
+    });
 });
