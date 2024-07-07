@@ -13,17 +13,10 @@ $(document).ready(function() {
         }
 
         // Close other sections
-        $('.expanding-section').not(expandingSection).css({
-            'max-height': '0',
-            'transition': 'max-height 0.3s ease-out'
-        });
+        $('.expanding-section').not(expandingSection).removeClass('active');
 
         // Toggle current section
-        if (expandingSection.css('max-height') === '0px') {
-            expandingSection.css('max-height', '300px'); // Adjusted height for better visibility
-        } else {
-            expandingSection.css('max-height', '0');
-        }
+        expandingSection.toggleClass('active');
 
         // Log current styles for debugging
         console.log("Current max-height after toggle: ", expandingSection.css('max-height'));
